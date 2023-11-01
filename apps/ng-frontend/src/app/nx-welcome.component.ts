@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'nx-tuto-nx-welcome',
@@ -423,7 +423,7 @@ import { CommonModule } from '@angular/common';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome ng-frontend 👋
+            Welcome {{title}} 👋
           </h1>
         </div>
         <!--  HERO  -->
@@ -853,4 +853,6 @@ nx affected:e2e</pre>
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent {}
+export class NxWelcomeComponent {
+  @Input() title!: string;
+}
