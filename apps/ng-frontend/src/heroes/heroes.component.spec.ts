@@ -26,7 +26,13 @@ describe('HeroesComponent', () => {
   it('should render default hero', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h2')?.textContent).toContain(
-      'Windstorm'
+      'Windstorm Details'
+    );
+    expect(compiled.querySelectorAll('div')?.item(0).textContent).toContain(
+      'id: 1'
+    );
+    expect(compiled.querySelectorAll('div')?.item(1).textContent).toContain(
+      'name: Windstorm'
     );
   });
 });
