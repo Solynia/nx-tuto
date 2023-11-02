@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Hero } from '@nx-tuto/interfaces';
 import { lastValueFrom, of } from 'rxjs';
 import { HeroesService } from './heroes.service';
@@ -9,6 +10,7 @@ describe('HeroesService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       providers: [HeroesService]
     });
     service = TestBed.inject(HeroesService);
