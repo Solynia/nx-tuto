@@ -26,7 +26,7 @@ describe('HeroesComponent', () => {
   it('should render default hero', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h2')?.textContent).toContain(
-      'Windstorm Details'
+      'WINDSTORM Details'
     );
     expect(compiled.querySelectorAll('div')?.item(0).textContent).toContain(
       'id: 1'
