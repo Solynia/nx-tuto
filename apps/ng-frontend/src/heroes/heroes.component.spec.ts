@@ -31,8 +31,11 @@ describe('HeroesComponent', () => {
     expect(compiled.querySelectorAll('div')?.item(0).textContent).toContain(
       'id: 1'
     );
-    expect(compiled.querySelectorAll('div')?.item(1).textContent).toContain(
-      'name: Windstorm'
+    expect(compiled.querySelector('label')?.textContent).toContain(
+      'Hero name:'
+    );
+    expect(compiled.querySelector('input')?.value).toContain(
+      'Windstorm'
     );
   });
 });
