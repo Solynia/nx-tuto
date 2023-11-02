@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Hero } from '@nx-tuto/interfaces';
 
 @Component({
   selector: 'nx-tuto-heroes',
@@ -9,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent {
-  hero = 'Windstorm';
+  hero: Hero = { id: 1, name: 'Windstorm' };
 }

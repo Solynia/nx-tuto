@@ -20,7 +20,7 @@ describe('HeroesComponent', () => {
   });
 
   it('should have as default hero Windstorm', () => {
-    expect(component.hero).toEqual('Windstorm');
+    expect(component.hero.name).toEqual('Windstorm');
   });
 
   it('should render default hero', () => {
